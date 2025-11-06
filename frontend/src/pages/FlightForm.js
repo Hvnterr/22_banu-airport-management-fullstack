@@ -16,9 +16,10 @@ export default function FlightForm({ onAdded }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    api.post("flights/", data)
+    api
+      .post("flights/", data)
       .then(() => {
-        alert("Flight added successfully!");
+        alert("✅ Flight added successfully!");
         onAdded();
         setData({
           flight_number: "",
@@ -29,76 +30,122 @@ export default function FlightForm({ onAdded }) {
           status: "Scheduled",
         });
       })
-      .catch(() => alert("Error adding flight."));
+      .catch(() => alert("❌ Error adding flight."));
   };
 
   return (
-    <form onSubmit={handleSubmit} className="card p-4 mb-4 shadow-sm">
-      <div className="row g-3">
-        <div className="col-md-4">
-          <input
-            type="text"
-            name="flight_number"
-            value={data.flight_number}
-            onChange={handleChange}
-            placeholder="Flight Number"
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-4">
-          <input
-            type="text"
-            name="origin"
-            value={data.origin}
-            onChange={handleChange}
-            placeholder="Origin"
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-4">
-          <input
-            type="text"
-            name="destination"
-            value={data.destination}
-            onChange={handleChange}
-            placeholder="Destination"
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-6">
-          <input
-            type="datetime-local"
-            name="departure_time"
-            value={data.departure_time}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-6">
-          <input
-            type="datetime-local"
-            name="arrival_time"
-            value={data.arrival_time}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-6">
-          <select
-            name="status"
-            value={data.status}
-            onChange={handleChange}
-            className="form-select"
-          >
-            <option value="Scheduled">Scheduled</option>
-            <option value="Delayed">Delayed</option>
-            <option value="Cancelled">Cancelled</option>
-          </select>
-        </div>
-        <div className="col-md-6 d-grid">
-          <button type="submit" className="btn btn-success">Add Flight</button>
-        </div>
+    <div className="card shadow-sm border-0 mt-4">
+      <div className="card-header bg-primary text-white">
+        <h5 className="mb-0">Add New Flight</h5>
       </div>
-    </form>
+
+      <div className="card-body">
+        <form onSubmit={handleSubmit}>
+          <div className="row g-3">
+            <div className="col-md-6">
+              <label htmlFor="flight_number" className="form-label fw-semibold">
+                Flight Number
+              </label>
+              <input
+                type="text"
+                name="flight_number"
+                id="flight_number"
+                className="form-control"
+                placeholder="Enter Flight Number"
+                value={data.flight_number}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label htmlFor="status" className="form-label fw-semibold">
+                Status
+              </label>
+              <select
+                name="status"
+                id="status"
+                className="form-select"
+                value={data.status}
+                onChange={handleChange}
+              >
+                <option value="Scheduled">Scheduled</option>
+                <option value="Delayed">Delayed</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </div>
+
+            <div className="col-md-6">
+              <label htmlFor="origin" className="form-label fw-semibold">
+                Origin
+              </label>
+              <input
+                type="text"
+                name="origin"
+                id="origin"
+                className="form-control"
+                placeholder="Origin City / Airport"
+                value={data.origin}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label htmlFor="destination" className="form-label fw-semibold">
+                Destination
+              </label>
+              <input
+                type="text"
+                name="destination"
+                id="destination"
+                className="form-control"
+                placeholder="Destination City / Airport"
+                value={data.destination}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label htmlFor="departure_time" className="form-label fw-semibold">
+                Departure Time
+              </label>
+              <input
+                type="datetime-local"
+                name="departure_time"
+                id="departure_time"
+                className="form-control"
+                value={data.departure_time}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label htmlFor="arrival_time" className="form-label fw-semibold">
+                Arrival Time
+              </label>
+              <input
+                type="datetime-local"
+                name="arrival_time"
+                id="arrival_time"
+                className="form-control"
+                value={data.arrival_time}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
+
+          <div className="text-end mt-4">
+            <button type="submit" className="btn btn-primary px-4">
+              <i className="bi bi-airplane-engines me-2"></i>
+              Add Flight
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }

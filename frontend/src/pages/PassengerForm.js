@@ -6,7 +6,7 @@ export default function PassengerForm({ onAdded }) {
     name: "",
     passport_number: "",
     email: "",
-    phone_number: ""
+    phone_number: "",
   });
 
   const handleChange = (e) =>
@@ -14,7 +14,8 @@ export default function PassengerForm({ onAdded }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    api.post("passengers/", data)
+    api
+      .post("passengers/", data)
       .then(() => {
         alert("Passenger added successfully!");
         onAdded();
@@ -24,52 +25,74 @@ export default function PassengerForm({ onAdded }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="card p-4 mb-4 shadow-sm">
-      <div className="row g-3">
-        <div className="col-md-3">
-          <input
-            type="text"
-            name="name"
-            value={data.name}
-            onChange={handleChange}
-            placeholder="Name"
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            name="passport_number"
-            value={data.passport_number}
-            onChange={handleChange}
-            placeholder="Passport Number"
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-3">
-          <input
-            type="email"
-            name="email"
-            value={data.email}
-            onChange={handleChange}
-            placeholder="Email"
-            className="form-control"
-          />
-        </div>
-        <div className="col-md-3">
-          <input
-            type="text"
-            name="phone_number"
-            value={data.phone_number}
-            onChange={handleChange}
-            placeholder="Phone Number"
-            className="form-control"
-          />
-        </div>
-        <div className="col-12 d-grid">
-          <button type="submit" className="btn btn-primary">Add Passenger</button>
-        </div>
+    <div className="card border-0 shadow-sm mb-4">
+      <div className="card-header bg-success text-white">
+        <h5 className="mb-0">
+          <i className="bi bi-person-fill-add me-2"></i>Add Passenger
+        </h5>
       </div>
-    </form>
+
+      <div className="card-body">
+        <form onSubmit={handleSubmit}>
+          <div className="row g-3">
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                value={data.name}
+                onChange={handleChange}
+                placeholder="Enter passenger name"
+                required
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Passport Number</label>
+              <input
+                type="text"
+                className="form-control"
+                name="passport_number"
+                value={data.passport_number}
+                onChange={handleChange}
+                placeholder="Enter passport number"
+                required
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Email</label>
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                value={data.email}
+                onChange={handleChange}
+                placeholder="Enter email address"
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Phone Number</label>
+              <input
+                type="tel"
+                className="form-control"
+                name="phone_number"
+                value={data.phone_number}
+                onChange={handleChange}
+                placeholder="Enter phone number"
+              />
+            </div>
+          </div>
+
+          <div className="text-end mt-4">
+            <button type="submit" className="btn btn-success px-4">
+              <i className="bi bi-person-plus-fill me-2"></i>Add Passenger
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }

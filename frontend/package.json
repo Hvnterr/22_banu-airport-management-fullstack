@@ -1,12 +1,11 @@
 {
-  "name": "frontend",
+  "name": "airport_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@headlessui/react": "^2.2.9",
-    "@heroicons/react": "^2.2.0",
-    "axios": "^1.13.1",
+    "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.5",

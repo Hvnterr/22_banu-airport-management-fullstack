@@ -8,79 +8,41 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="min-vh-100 bg-light">
-        {/* Header / Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        {/* Navbar */}
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
           <div className="container">
-            <NavLink className="navbar-brand fw-bold" to="/dashboard">
-              Airport Management
-            </NavLink>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <a className="navbar-brand fw-bold" href="/">Airport Management</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <NavLink
-                    to="/dashboard"
-                    className={({ isActive }) =>
-                      `nav-link fw-semibold ${isActive ? "active" : ""}`
-                    }
-                  >
-                    Dashboard
-                  </NavLink>
+                  <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      `nav-link fw-semibold ${isActive ? "active" : ""}`
-                    }
-                  >
-                    Flights
-                  </NavLink>
+                  <NavLink className="nav-link" to="/">Flights</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    to="/passengers"
-                    className={({ isActive }) =>
-                      `nav-link fw-semibold ${isActive ? "active" : ""}`
-                    }
-                  >
-                    Passengers
-                  </NavLink>
+                  <NavLink className="nav-link" to="/passengers">Passengers</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    to="/bookings"
-                    className={({ isActive }) =>
-                      `nav-link fw-semibold ${isActive ? "active" : ""}`
-                    }
-                  >
-                    Bookings
-                  </NavLink>
+                  <NavLink className="nav-link" to="/bookings">Bookings</NavLink>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
 
-        {/* Page content */}
-        <div className="container my-4">
+        {/* Main Content */}
+        <main className="container py-4">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/" element={<FlightList />} />
             <Route path="/passengers" element={<PassengerList />} />
             <Route path="/bookings" element={<BookingList />} />
           </Routes>
-        </div>
+        </main>
       </div>
     </BrowserRouter>
   );
