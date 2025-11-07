@@ -1,38 +1,72 @@
-# Poject 5: Emoji Mood Tracker 🎭
+# ✈️ Airport Management System (Fullstack Project)
 
-## 🚀 Project Overview
-An interactive mood tracking application built with React that demonstrates advanced event handling and multiple useState hooks. Click emojis to track your daily moods with visual feedback.
+A full-stack web application for managing airport operations — including **flights, passengers, and bookings** — built with **React (frontend)** and **Django REST Framework (backend)**.
 
-## ✨ Features
-- **Interactive emoji buttons** with click events
-- **Multiple useState hooks** for managing different states
-- **Visual feedback** on selection
-- **Mood tracking** with counters
-- **Responsive design**
+---
 
-## 🛠️ Technologies Used
-- React
-- JavaScript (ES6+)
-- useState Hook
-- Event Handling
-- CSS-in-JS Styling
+## 🚀 Features
 
-## 🎯 Learning Objectives
-- **Advanced event handling** in React
-- **Multiple state variables** with useState
-- **Interactive UI components**
-- **State management** for complex interactions
+### 🧭 Dashboard
+- Displays total counts for Flights, Passengers, and Bookings.
+- Real-time data fetched from the backend API.
 
-## 🚀 Quick Start
+### 🛫 Flights
+- Add, view, and manage flights (origin, destination, schedule, and status).
+
+### 👨‍✈️ Passengers
+- Add and list all registered passengers with contact details.
+
+### 🎟️ Bookings
+- Book passengers on flights.
+- Manage seat numbers and booking status.
+
+---
+
+## 🧩 Tech Stack
+
+### Frontend:
+- React 18
+- React Router
+- Bootstrap 5
+- Axios
+
+### Backend:
+- Django 5
+- Django REST Framework
+- SQLite (default) or PostgreSQL
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
 ```bash
-# Clone this repository
-git clone https://github.com/banumariwan/day4-event-handling.git
+git clone https://github.com/banumariwan/22-banu-airport-management-fullstack.git
+cd 22-banu-airport-management-fullstack
+2️⃣ Backend Setup (Django)
+bash
+Copy code
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+Backend runs at:
+👉 http://127.0.0.1:8000/
 
-# Navigate to project directory
-cd day4-event-handling
-
-# Install dependencies
+3️⃣ Frontend Setup (React)
+bash
+Copy code
+cd frontend
 npm install
-
-# Start development server
 npm start
+Frontend runs at:
+👉 http://localhost:3000/
+
+
+
+👩‍💻 Author
+Banu Mariwan
+💼 Software Engineer & Cybersecurity Enthusiast
+🔗 GitHub Profile
